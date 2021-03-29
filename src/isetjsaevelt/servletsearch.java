@@ -37,11 +37,11 @@ public class servletsearch extends HttpServlet {
 		request.setAttribute("a",rech);
 		request.setAttribute("b",sel);
 		
-		 if (sel.equals("Google")) {
-			 response.sendRedirect("https://www.google.com/"+rech);
+		  if (sel.equals("Google")) {
+			 response.sendRedirect("http://www.google.com/search?q="+rech);
 		 }
 		 else {
-			 response.sendRedirect("https://www.google.com/search?q=yahoo"+rech);
+			 response.sendRedirect("https://search.yahoo.com/search?p="+rech);
 		 }
 	}
 
