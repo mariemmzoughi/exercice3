@@ -37,21 +37,12 @@ public class authentificationservlet extends HttpServlet {
 		request.setAttribute("a",lo);
 		request.setAttribute("b",pas);
 		
-		 if (lo == null || lo.isEmpty()) {
-			 out.println("<p>entre votre login </p>");
+		if (lo.equals("dsi22") && (pas.equals("dsi22"))) {
+			 out.println("authentification reussie");
 	        }
-		 else {
-			 out.println("<b>"+lo+"</b>");
-		 }
-			 
-		 
-
-	        if (pas == null || pas.isEmpty()) {
-	        	 out.println("<p>entre votre password  </p>");
-	        }
-	        else {
-				 out.println("<b>"+pas+"</b>") ;
-			 }
+		 else  {
+			 out.println ("echec authentification ");
+		 }    
 	}	        
 	  /**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
